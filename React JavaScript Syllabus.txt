@@ -1,0 +1,357 @@
+
+  React JavaScript Syllabus :
+  ===========================
+
+   1. ReactJS - Home
+   2. ReactJS - Introduction
+   3. ReactJS - Installation
+   4. ReactJS - Architecture
+   5. ReactJS - Creating a React Application
+   6. ReactJS - JSX
+   7. ReactJS - Components
+   8. ReactJS - Styling
+   9. ReactJS - Properties (props)
+  10. ReactJS - Event management
+  11. ReactJS - State Management
+  12. ReactJS - Http client programming
+  13. ReactJS - Form programming
+  14. ReactJS - Routing
+  15. ReactJS - Redux
+  16. ReactJS - Animation
+  17. ReactJS - Testing
+  18. ReactJS - CLI Commands
+  19. ReactJS - Building and Deployment
+  20. ReactJS - Example
+  
+  21. Practical Examples :
+
+     *** ReactJS Tutorial *** :    
+         ================
+  
+   1. ReactJS - Home
+   2. ReactJS - Introduction
+   3. ReactJS - Installation
+                        (A) Toolchain
+                        (B) The serve static server
+                        (C) Babel compiler
+                        (D) Create React App toolchain
+                                * Updating the toolchain
+                                * Advantages of using React toolchain
+
+   4. ReactJS - Architecture
+                           * React elements
+                           * JSX 
+                           * React Component
+                           (A) Workflow of a React application
+                                 * Example
+                                 * Output
+                           (B) React.createElement 
+                           (C) ReactDOM.render
+                           (D) Nested React element
+                                 * Example
+                                 * Output
+                           (E) Use JSX Syntax
+                           (F) Virtual DOM 
+                           (G) Architecture of the React Application
+
+   5. ReactJS - Creating a React Application
+                             (A) Using Rollup bundler
+                             (B) Using Parcel bundler
+
+   6. ReactJS - JSX
+                          (A) Expressions
+                                 * Example
+                                 * Output
+                          (B) Functions
+                                 * Example
+                                 * Output
+                          (C) Attributes
+                                 * Example
+                                 * Output
+                          (D) Expression in attributes
+
+   7. ReactJS - Components
+         
+               (A) React component accomplish features using Three Concepts −
+                                   1) Properties −
+                                   2) Events − 
+                                   3) State −
+               (B) Creating a React component 
+               (C) Creating a class component
+                               * Example
+                               * Output
+               (D) Creating a function component
+
+   8. ReactJS - Styling
+         
+          'top options' are as follows −
+                    1) CSS stylesheet −
+                    2) Inline styling −
+                    3) CSS Modules −
+                    4) Styled component −
+                    5) Sass stylesheet − 
+                    6) Post processing stylesheet −
+
+          three important methodology to style our component-
+              (A) CSS Stylesheet
+              (B) Inline Styling
+              (C) CSS Modules
+
+   9. ReactJS - Properties (props)
+
+  React props support attribute’s value of different types. They are as follows,
+             1) String
+             2) Number
+             3) Datetime 
+             4) Array
+             5) List
+             6) Objects
+
+    (A) Create a component using Properties
+    (B) Nested Components
+    (C) Use Component
+    (D) Component Collection
+
+  10. ReactJS - Event management
+
+           1) Define an event handler method to handle the given event :
+                ______________________________________
+               |  log() {                             |
+               |     cosole.log("Event is fired");    |
+               |  }                                   |
+               |______________________________________|
+         
+     React provides an alternative syntax using "lambda function" to define event 
+     handler,
+           The lambda syntax is −
+                _____________________________________
+               |   log = () => {                     | 
+               |      cosole.log("Event is fired");  | 
+               |   }                                 |
+               |_____________________________________|
+          
+     to know the target of the event, then add an argument "e" in the handler 
+     method.
+ React will send the event target details to the handler method.
+       2)    _____________________________________
+            |   log(e) {                          |
+            |      cosole.log("Event is fired");  |
+            |      console.log(e.target);         |
+            |   }                                 |
+            |_____________________________________|
+
+    The alternative lambda syntax is −
+          _____________________________________
+         |   log = (e) => {                    | 
+         |      cosole.log("Event is fired");  |
+         |      console.log(e.target);         |
+         |   }                                 |
+         |_____________________________________|
+    
+     If you want to send extra details during an event, then add the extra details
+   as initial argument and then add argument (e) for event target,
+       (3)
+            ____________________________________
+           |  log(extra, e) {                   |
+           |     cosole.log("Event is fired");  |
+           |     console.log(e.target);         |
+           |     console.log(extra);            |
+           |     console.log(this);             |
+           |  }                                 |
+           |____________________________________|
+
+       The alternative lambda syntax is as follows −
+        ______________________________________
+       |   log = (extra, e) => {              |
+       |      cosole.log("Event is fired");   |
+       |      console.log(e.target);          |
+       |      console.log(extra);             |
+       |      console.log(this);              |
+       |  }                                   |
+       |______________________________________|
+
+      
+  Bind the event handler method in the constructor of the component. This will
+  ensure the availability of this in the event handler method.
+    (4)
+           ______________________________________________________
+          |   constructor(props) {                               |
+          |      super(props);                                   |
+          |      this.logContent = this.logContent.bind(this);   | 
+          |   }                                                  |     
+          |______________________________________________________| 
+
+
+ * If the event handler is defined in alternate lambda syntax, then the binding is
+   not needed.
+ * this keyword will be automatically bound to the event handler method.
+    * Set the event handler method for the specific event as specified below −
+          _______________________________________________
+         |  <div onClick={this.log}> ... </div>          |
+         |_______________________________________________|
+ * To set extra arguments, bind the event handler method and then pass the extra
+   information as second argument.
+      ___________________________________________________________
+     |   <div onClick={this.log.bind(this, extra)}> ... </div>   |
+     |___________________________________________________________|
+
+       The alternate lambda syntax is as follows − 
+      ____________________________________________________
+     |   <div onClick={this.log(extra, e)}> ... </div>    | 
+     |____________________________________________________| 
+
+  11. ReactJS - State Management
+                (A)  What is state?
+                (B)  The clock component :
+                 The simple representation of the state is as follows −
+                _____________________________________
+               |   {                                 | 
+               |   date: '2020-10-10 10:10:10'       |
+               |   }                                 |
+               |_____________________________________|
+
+
+  12. ReactJS - Http client programming
+
+                (A) Expense Rest Api Server :
+             * Open a command prompt and create a new folder, express-rest-api :                           ___________________________
+                       |   cd /go/to/workspace     |
+                       |   mkdir apiserver         |
+                       |   cd apiserver            |
+                       |___________________________|
+
+     (B)  Initialize a new node application using the below command −
+                          _____________
+                         |  npm init   |
+                         |_____________|
+
+     (C) npm init :
+        * The npm init will prompt and ask us to enter basic project details.
+        * Let us enter apiserver for project name and server.js for entry point.
+        * Leave other configuration with default option.
+
+        (D) /// creating a package.json file. \\\
+                ``````````````````````````````
+        (E)  Next, install express, nedb & cors modules using below command −
+
+        (F) create a file, data.csv,
+
+        (L) The fetch() api :
+            ````````````````` 
+
+  13. ReactJS - Form programming
+               (A) Controlled component −
+               (B) Uncontrolled component −
+
+  14. ReactJS - Routing
+             Concept :
+         1) Router -
+         2) Link -
+         3) Switch & Route − Both are used together.
+              (A) Install React Router :
+              (B) Nested routing -
+              (C) Creating navigation -
+
+  15. ReactJS - Redux
+
+    (A) Concepts  :
+        ```````````  
+          1) Store −
+          2) Actions -
+          3) Reducers -
+          4) Action creators -
+          5) Component − 
+                The workflow(Diagram) of a typical redux store :
+
+     (B) Redux API :
+         `````````````
+      
+    (C)  Provider component :
+         `````````````````````
+  16. ReactJS - Animation
+
+         (A) React Transition Group :
+             ````````````````````````
+               * The library exposes minimum possible state of every
+                 element and they are given below -
+                      1) Entering
+                      2) Entered
+                      3) Exiting
+                      4) Exited 
+          
+         (B) Transition :
+             ````````````` 
+
+  17. ReactJS - Testing
+          
+           (A) Create React app :
+               ```````````````````
+           (B) Testing in a custom application :
+               ``````````````````````````````````
+           (C) Next, install the testing library ,
+
+           (D) Next, import react library.
+
+           (E) Next, import the testing library ,
+
+  18. ReactJS - CLI Commands
+        (A) Creating a new application :
+            `````````````````````````````
+                1) Using npx script :
+                2) Using npm package manager :
+                3) Using yarn package manager :
+
+        (B) Selecting a template :
+            ```````````````````````
+        (C) Installing a dependency :
+            ``````````````````````````
+         
+        (D) Running the application :
+            `````````````````````````` 
+
+  19. ReactJS - Building and Deployment
+
+        (A) Building :
+            ```````````
+        (B) Deployment :
+            `````````````
+               1) Local deployment :
+                  ~~~~~~~~~~~~~~~~~~~
+               2) Production deployment :
+                  ~~~~~~~~~~~~~~~~~~~~~~~~
+               3) Relative path :
+                  ~~~~~~~~~~~~~~~~
+
+  20. ReactJS - Example
+
+       * React basics (component, jsx, props and state)
+
+       * Router using react-router
+
+       * Http client programming (Web API)
+
+       * Form programming using Formik
+
+       * Advanced state management using Redux
+
+       * Async / await programming
+         
+            (A) Features :
+                ```````````
+                features of our sample expense manager application are −
+
+                     * Listing all the expenses from the server
+                     * Add an expense item
+                     * Delete an expense item
+                    
+                   Here, 
+
+                1) Expense manager API
+
+                2) Install necessary modules
+
+                3) State management
+
+                4) List expenses
+
+                5) Add expense
